@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from './../components/Title/index';
-import Subscription from './../components/Subscription/index';
+import Card from './../components/Card/index';
 
 const planos = [
     {
@@ -25,15 +25,13 @@ const planos = [
 
 function Planos() {
     return (
-        <div className="px-4 py-1 my-1 text-center">
-            <Title titulo="Nossos Planos" texto="Planos disponiveis" />
-            <div className="Card">
-                <div className="container">
-                    <div className="row mt-5">
-                        {planos.map((plano, ind) => (
-                            <Subscription foto={plano.foto} nome={plano.nome} duracao={plano.duracao} valor={plano.valor} />
-                        ))}
-                    </div>
+        <div className="Card">
+            <Title titulo="Planos" texto="NOSSOS PLANOS" />
+            <div className="container">
+                <div className="row mt-5">
+                    {planos.map((plano, ind) => (
+                        <Card tipo="plano" foto={plano.foto} nome={plano.nome} duracao={plano.duracao} ano="" assistido="" valor={plano.valor} />
+                    ))}
                 </div>
             </div>
         </div>

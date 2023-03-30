@@ -29,11 +29,11 @@ const filmes = [
 function Home() {
     return (
         <div className="Card">
-            <Title titulo="Catalogo de Filmes" texto="Filmes disponiveis" />
+            <Title titulo="Filmes" texto="NOSSO CATÁLOGO" />
             <div className="container">
                 <div className="row mt-5">
                     {filmes.map((filme, ind) => (
-                        <Card foto={filme.foto} nome={filme.nome} duracao={filme.duracao} ano={filme.ano} assistido={filme.assistido} />
+                        <Card tipo="filme" foto={filme.foto} nome={filme.nome} duracao={filme.duracao} ano={filme.ano} assistido={filme.assistido} valor="" />
                     ))}
                 </div>
             </div>
